@@ -4,6 +4,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:dev",
     "start:dev": "set NODE_ENV=development&& nodemon src/index.ts",
     "start:prod": "set NODE_ENV=production&& nodemon src/index.ts",
     "compile": "tsc",
