@@ -15,6 +15,6 @@ This Node.js API project, built with TypeScript, includes various features such 
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Sumanbassetti/NodeJs-Api.git
    cd project
 
