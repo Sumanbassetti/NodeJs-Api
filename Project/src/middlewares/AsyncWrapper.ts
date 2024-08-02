@@ -26,6 +26,14 @@ export default function asyncWrapper(handler: AsyncHandler) {
   };
 }
 
+/**
+ * A middleware function to handle asynchronous operations with centralized error handling.
+ * @param {AsyncFncHandler} handler - The asynchronous function to be executed.
+ * @param {any} args - The arguments to be passed to the asynchronous function.
+ * @returns {Promise<any>} - The result of the asynchronous function execution.
+ * @throws {CustomError} - Throws a custom error if the asynchronous function execution fails.
+ */
+
 export async function asyncHandler(
   handler: AsyncFncHandler,
   args: any

@@ -21,6 +21,7 @@ export default class App {
         this.appConfig();
         this.server = http.createServer(this._app);
     }
+    //For app configuration
     private appConfig(): void {
         this._app.use(
             logger("combined", {
@@ -36,38 +37,18 @@ export default class App {
         );
         this._app.use(express.json());
         this._app.use(cors());
+        //For initilize the main route
         this._app.use("/api/v1", appRouter);
         this._app.use(notFound);
         this._app.use(errorHandler);
     }
 
-    /**
-     * The function returns a boolean value indicating whether the response status code is less than
-     * BAD_REQUEST.
-     * @param req - express.Request is an object that represents the HTTP request that was sent by the
-     * client to the server.
-     * @param res - The "res" parameter is an instance of the Express Response object, which is used to
-     * send a response back to the client who made the request.
-     * @returns A boolean value is being returned. The function checks if the response status code is
-     * less than the HTTP status code for a bad request (400) and returns true if it is, indicating that
-     * the request was successful and can be skipped.
-     */
+    //For every success request 
     private skipSuccess(req: express.Request, res: express.Response): boolean {
         return res.statusCode < StatusCodes.BAD_REQUEST;
     }
     
-    /**
-     * The function returns a boolean value indicating whether the response status code is a bad request
-     * or not.
-     * @param req - express.Request is an object that represents the HTTP request that was sent by the
-     * client to the server.
-     * @param res - The `res` parameter is an instance of the `express.Response` class, which represents
-     * the HTTP response that will be sent back to the client.
-     * @returns The function `skipError` is returning a boolean value. It checks if the response status
-     * code is greater than or equal to the `BAD_REQUEST` status code (which is typically 400), and
-     * returns `true` if it is, indicating that the error should be skipped. Otherwise, it returns
-     * `false`.
-     */
+    //For every error request
     private skipError(req: express.Request, res: express.Response): boolean {
         return res.statusCode >= StatusCodes.BAD_REQUEST;
     }

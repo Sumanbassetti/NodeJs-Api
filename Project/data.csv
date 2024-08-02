@@ -1,0 +1,13 @@
+question,categories,questionType,marks,hints
+"What is the use of `System.out.println()` in Java?","[""66abe59c11f4320bcbb94994""]",SAQ,5,"It prints text to console."
+"Explain polymorphism in Java.","[""66abe59c11f4320bcbb94994""]",LAQ,15,"Think about method overloading and overriding."
+"Who is the creator of Java?","[""66abe59c11f4320bcbb94994""]",MCQ,5,"Hint: He worked at Sun Microsystems."
+"How are functions declared","[""66ac5ef957a63da18353ff4c"",""66ac5c1bdead2dadf6c57950""]",SAQ,10,"Think about syntax and return types."
+"What is the DataType? Explain all dataTypes","[""66ac5ef957a63da18353ff4c"",""66ac5c1bdead2dadf6c57950""]",SAQ,10,"Consider primitive and non-primitive types, and give examples of each."
+"What are lists in Python?","[""66ac5ed357a63da18353ff46""]",SAQ,5,"Think about arrays with more functionality."
+"How to declare a function in Python?","[""66ac5ed357a63da18353ff46""]",SAQ,10,"Use the `def` keyword."
+"What is npm in NodeJs?","[""66ac5ee257a63da18353ff49""]",SAQ,5,"Node package manager."
+"Explain the event loop in NodeJs.","[""66ac5ee257a63da18353ff49""]",LAQ,15,"It's essential for non-blocking I/O."
+"What is `const` in JavaScript?","[""66ac5ef957a63da18353ff4c""]",SAQ,5,"Declares a block-scoped constant."
+"Describe closures in JavaScript.","[""66ac5ef957a63da18353ff4c""]",LAQ,15,"Functions that retain their lexical scope."
+"What is the difference between `let` and `var` in JavaScript?","[""66ac5ef957a63da18353ff4c""]",SAQ,10,"Think about scope and hoisting."

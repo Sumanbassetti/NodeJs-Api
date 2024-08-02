@@ -1,0 +1,1000 @@
+{
+	"info": {
+		"_postman_id": "90d81077-f621-428b-8a68-b31ece7b81c2",
+		"name": "Node Js Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26574675"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Suman Ghosh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "suman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abc@123",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "7412879575",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kolkata, Sector-Iv",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2001-03-16",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/DELL/OneDrive/Pictures/photo_2021-09-04_22-49-13.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Suman Ghosh\",\r\n    \"email\": \"suman@gmail.com\",\r\n    \"password\": \"Abc@123\",\r\n    \"phoneNumber\": \"7412879575\",\r\n    \"address\": \"Kolkata, Sector-Iv\",\r\n    \"gender\": \"Male\",\r\n    \"dob\": \"2001-03-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/user/signup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "554"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22a-K0MRvehIbF+TTBrhTmias0p5zYc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 07:14:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"name\": \"Suman Ghosh\",\n        \"email\": \"suman@gmail.com\",\n        \"phoneNumber\": 7412879575,\n        \"address\": \"Kolkata, Sector-Iv\",\n        \"password\": \"$2a$10$ZmViDsigjB1AVYUtOJ3JUe8fUbZ8HQJE1ed/pVCQd96Xv6fmGiIF6\",\n        \"gender\": \"Male\",\n        \"dob\": \"2001-03-16T00:00:00.000Z\",\n        \"isActive\": true,\n        \"_id\": \"66ac87724021d6f45d1a2dd9\",\n        \"createdAt\": \"2024-08-02T07:14:58.866Z\",\n        \"updatedAt\": \"2024-08-02T07:14:58.866Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjODc3MjQwMjFkNmY0NWQxYTJkZDkiLCJpYXQiOjE3MjI1ODI4OTksImV4cCI6MTcyMjY2OTI5OX0.kWXvPeiEKhGM0m26LHujXHqh-nWA4g8QqpeYRGR8aOI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjODc3MjQwMjFkNmY0NWQxYTJkZDkiLCJpYXQiOjE3MjI1ODMwMzgsImV4cCI6MTcyMjY2OTQzOH0.pWdOlC8iT0-qmu0JxzVy3vyG1NZNzzsBMza9zswbrEM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1ef4f6d0-c44f-44d0-b28f-73d8aeb407d4"
+								},
+								{
+									"key": "name",
+									"value": "Suman Kumar Ghosh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "suman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abc@123",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "7412879678",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kolkata, Sector-Iv",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2001-03-17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/edit-profile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"edit-profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit User Profile",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1ef4f6d0-c44f-44d0-b28f-73d8aeb407d4"
+										},
+										{
+											"key": "name",
+											"value": "Suman Kumar Ghosh",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "suman@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Abc@123",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "7412879678",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Kolkata, Sector-Iv",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "2001-03-17",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/user/edit-profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user",
+										"edit-profile"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ad-gJRWrVctDULgWazqWMu75K4mdxM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 07:18:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66ac87724021d6f45d1a2dd9\",\n    \"name\": \"Suman Kumar Ghosh\",\n    \"email\": \"suman@gmail.com\",\n    \"phoneNumber\": 7412879678,\n    \"address\": \"Kolkata, Sector-Iv\",\n    \"password\": \"$2a$10$AxrouJVM7bHuTzQ74/lJYuqyrfoDEtPazA61Y14hlx7DYRef.WvLK\",\n    \"gender\": \"0\",\n    \"dob\": \"2001-03-17T00:00:00.000Z\",\n    \"isActive\": true,\n    \"createdAt\": \"2024-08-02T07:14:58.866Z\",\n    \"updatedAt\": \"2024-08-02T07:18:29.146Z\",\n    \"__v\": 0,\n    \"profilePicture\": \"uploads\\\\IMG_20210904_0001_1722583108984.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1ODIyMjgsImV4cCI6MTcyMjY2ODYyOH0.V42ZX0dvoV2deWMPtDH3OeQ4MVPLvSu7Q49barHcS9E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/user/profile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/user/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ad-gJRWrVctDULgWazqWMu75K4mdxM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 07:18:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66ac87724021d6f45d1a2dd9\",\n    \"name\": \"Suman Kumar Ghosh\",\n    \"email\": \"suman@gmail.com\",\n    \"phoneNumber\": 7412879678,\n    \"address\": \"Kolkata, Sector-Iv\",\n    \"password\": \"$2a$10$AxrouJVM7bHuTzQ74/lJYuqyrfoDEtPazA61Y14hlx7DYRef.WvLK\",\n    \"gender\": \"0\",\n    \"dob\": \"2001-03-17T00:00:00.000Z\",\n    \"isActive\": true,\n    \"createdAt\": \"2024-08-02T07:14:58.866Z\",\n    \"updatedAt\": \"2024-08-02T07:18:29.146Z\",\n    \"__v\": 0,\n    \"profilePicture\": \"uploads\\\\IMG_20210904_0001_1722583108984.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"suman@gmail.com\",\r\n    \"password\":\"Abc@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/signin",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User SignIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"suman@gmail.com\",\r\n    \"password\":\"Abc@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/user/signin",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "554"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22a-p8fSk8SXnv5pyMCs1vvZuOfa30g\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 07:17:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"66ac87724021d6f45d1a2dd9\",\n        \"name\": \"Suman Ghosh\",\n        \"email\": \"suman@gmail.com\",\n        \"phoneNumber\": 7412879575,\n        \"address\": \"Kolkata, Sector-Iv\",\n        \"password\": \"$2a$10$ZmViDsigjB1AVYUtOJ3JUe8fUbZ8HQJE1ed/pVCQd96Xv6fmGiIF6\",\n        \"gender\": \"Male\",\n        \"dob\": \"2001-03-16T00:00:00.000Z\",\n        \"isActive\": true,\n        \"createdAt\": \"2024-08-02T07:14:58.866Z\",\n        \"updatedAt\": \"2024-08-02T07:14:58.866Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjODc3MjQwMjFkNmY0NWQxYTJkZDkiLCJpYXQiOjE3MjI1ODMwMzgsImV4cCI6MTcyMjY2OTQzOH0.pWdOlC8iT0-qmu0JxzVy3vyG1NZNzzsBMza9zswbrEM\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1NzE0MTYsImV4cCI6MTcyMjY1NzgxNn0.DRMevhhPUphtXmaiPAvtko9ES6cgbIvSRAGkhF4SGW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Javascript\",\r\n    \"description\": \"Description for Javascript\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/category",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Javascript\",\r\n    \"description\": \"Description for Javascript\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/category",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-O1zjjFvhmy+Bx3A61KyQ3XDX/h4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 04:22:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Javascript\",\n    \"description\": \"Description for Javascript\",\n    \"_id\": \"66ac5ef957a63da18353ff4c\",\n    \"createdAt\": \"2024-08-02T04:22:17.366Z\",\n    \"updatedAt\": \"2024-08-02T04:22:17.366Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1NzE0MTYsImV4cCI6MTcyMjY1NzgxNn0.DRMevhhPUphtXmaiPAvtko9ES6cgbIvSRAGkhF4SGW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/category",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/category",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1052"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41c-2gPLiWjFVP1x6l8xRchKiKFaZlU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 04:22:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 6,\n    \"category\": [\n        {\n            \"_id\": \"66abe59c11f4320bcbb94994\",\n            \"name\": \"Java\",\n            \"description\": \"Java Category\",\n            \"createdAt\": \"2024-08-01T19:44:28.328Z\",\n            \"updatedAt\": \"2024-08-01T19:44:28.328Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac4c4abcb10598dbbfd5f2\",\n            \"name\": \"C\",\n            \"description\": \"C Category\",\n            \"createdAt\": \"2024-08-02T03:02:34.457Z\",\n            \"updatedAt\": \"2024-08-02T03:02:34.457Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac5c1bdead2dadf6c57950\",\n            \"name\": \"C\",\n            \"description\": \"C Category\",\n            \"createdAt\": \"2024-08-02T04:10:03.871Z\",\n            \"updatedAt\": \"2024-08-02T04:10:03.871Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac5ed357a63da18353ff46\",\n            \"name\": \"Pyhton\",\n            \"description\": \"Description for Python Category\",\n            \"createdAt\": \"2024-08-02T04:21:39.662Z\",\n            \"updatedAt\": \"2024-08-02T04:21:39.662Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac5ee257a63da18353ff49\",\n            \"name\": \"NodeJs\",\n            \"description\": \"Description for NodeJs\",\n            \"createdAt\": \"2024-08-02T04:21:54.919Z\",\n            \"updatedAt\": \"2024-08-02T04:21:54.919Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac5ef957a63da18353ff4c\",\n            \"name\": \"Javascript\",\n            \"description\": \"Description for Javascript\",\n            \"createdAt\": \"2024-08-02T04:22:17.366Z\",\n            \"updatedAt\": \"2024-08-02T04:22:17.366Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Question Category Wise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1NzE0MTYsImV4cCI6MTcyMjY1NzgxNn0.DRMevhhPUphtXmaiPAvtko9ES6cgbIvSRAGkhF4SGW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/category/getquestionsbycategory",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"category",
+								"getquestionsbycategory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Question Category Wise",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/category/getquestionsbycategory",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"category",
+										"getquestionsbycategory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1422-/hnf/VwoNq1RF0FgZ4/SMwM4AHQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 04:47:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66abe59c11f4320bcbb94994\",\n        \"name\": \"Java\",\n        \"description\": \"Java Category\",\n        \"createdAt\": \"2024-08-01T19:44:28.328Z\",\n        \"updatedAt\": \"2024-08-01T19:44:28.328Z\",\n        \"__v\": 0,\n        \"questions\": [\n            {\n                \"_id\": \"66ac647857a63da18353ff8b\",\n                \"question\": \"Who is the creator of Java?\",\n                \"categories\": [\n                    \"66abe59c11f4320bcbb94994\"\n                ],\n                \"questionType\": \"MCQ\",\n                \"marks\": 5,\n                \"hints\": \"Hint: He worked at Sun Microsystems.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff89\",\n                \"question\": \"What is the use of `System.out.println()` in Java?\",\n                \"categories\": [\n                    \"66abe59c11f4320bcbb94994\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 5,\n                \"hints\": \"It prints text to console.\",\n                \"createdAt\": \"2024-08-02T04:45:44.282Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.282Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff8a\",\n                \"question\": \"Explain polymorphism in Java.\",\n                \"categories\": [\n                    \"66abe59c11f4320bcbb94994\"\n                ],\n                \"questionType\": \"LAQ\",\n                \"marks\": 15,\n                \"hints\": \"Think about method overloading and overriding.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"66ac5c1bdead2dadf6c57950\",\n        \"name\": \"C\",\n        \"description\": \"C Category\",\n        \"createdAt\": \"2024-08-02T04:10:03.871Z\",\n        \"updatedAt\": \"2024-08-02T04:10:03.871Z\",\n        \"__v\": 0,\n        \"questions\": [\n            {\n                \"_id\": \"66ac647857a63da18353ff8d\",\n                \"question\": \"What is the DataType? Explain all dataTypes\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\",\n                    \"66ac5c1bdead2dadf6c57950\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Consider primitive and non-primitive types, and give examples of each.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff8c\",\n                \"question\": \"How are functions declared\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\",\n                    \"66ac5c1bdead2dadf6c57950\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Think about syntax and return types.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"66ac5ed357a63da18353ff46\",\n        \"name\": \"Pyhton\",\n        \"description\": \"Description for Python Category\",\n        \"createdAt\": \"2024-08-02T04:21:39.662Z\",\n        \"updatedAt\": \"2024-08-02T04:21:39.662Z\",\n        \"__v\": 0,\n        \"questions\": [\n            {\n                \"_id\": \"66ac647857a63da18353ff8e\",\n                \"question\": \"What are lists in Python?\",\n                \"categories\": [\n                    \"66ac5ed357a63da18353ff46\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 5,\n                \"hints\": \"Think about arrays with more functionality.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff8f\",\n                \"question\": \"How to declare a function in Python?\",\n                \"categories\": [\n                    \"66ac5ed357a63da18353ff46\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Use the `def` keyword.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"66ac5ee257a63da18353ff49\",\n        \"name\": \"NodeJs\",\n        \"description\": \"Description for NodeJs\",\n        \"createdAt\": \"2024-08-02T04:21:54.919Z\",\n        \"updatedAt\": \"2024-08-02T04:21:54.919Z\",\n        \"__v\": 0,\n        \"questions\": [\n            {\n                \"_id\": \"66ac647857a63da18353ff91\",\n                \"question\": \"Explain the event loop in NodeJs.\",\n                \"categories\": [\n                    \"66ac5ee257a63da18353ff49\"\n                ],\n                \"questionType\": \"LAQ\",\n                \"marks\": 15,\n                \"hints\": \"It's essential for non-blocking I/O.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff90\",\n                \"question\": \"What is npm in NodeJs?\",\n                \"categories\": [\n                    \"66ac5ee257a63da18353ff49\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 5,\n                \"hints\": \"Node package manager.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"66ac5ef957a63da18353ff4c\",\n        \"name\": \"Javascript\",\n        \"description\": \"Description for Javascript\",\n        \"createdAt\": \"2024-08-02T04:22:17.366Z\",\n        \"updatedAt\": \"2024-08-02T04:22:17.366Z\",\n        \"__v\": 0,\n        \"questions\": [\n            {\n                \"_id\": \"66ac647857a63da18353ff8d\",\n                \"question\": \"What is the DataType? Explain all dataTypes\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\",\n                    \"66ac5c1bdead2dadf6c57950\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Consider primitive and non-primitive types, and give examples of each.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff8c\",\n                \"question\": \"How are functions declared\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\",\n                    \"66ac5c1bdead2dadf6c57950\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Think about syntax and return types.\",\n                \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff92\",\n                \"question\": \"What is `const` in JavaScript?\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 5,\n                \"hints\": \"Declares a block-scoped constant.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff93\",\n                \"question\": \"Describe closures in JavaScript.\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\"\n                ],\n                \"questionType\": \"LAQ\",\n                \"marks\": 15,\n                \"hints\": \"Functions that retain their lexical scope.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66ac647857a63da18353ff94\",\n                \"question\": \"What is the difference between `let` and `var` in JavaScript?\",\n                \"categories\": [\n                    \"66ac5ef957a63da18353ff4c\"\n                ],\n                \"questionType\": \"SAQ\",\n                \"marks\": 10,\n                \"hints\": \"Think about scope and hoisting.\",\n                \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n                \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "Import Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1NzE0MTYsImV4cCI6MTcyMjY1NzgxNn0.DRMevhhPUphtXmaiPAvtko9ES6cgbIvSRAGkhF4SGW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Bassetti/GitCodeBassetti/NodeJs-Api/Project/data.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/question/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"question",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Import Question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/D:/Bassetti/GitCodeBassetti/NodeJs-Api/Project/data.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/question/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"question",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3555"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de3-gXdk9Pp6LgG3wvt6aSfpu4Duaak\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 04:45:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"question\": \"What is the use of `System.out.println()` in Java?\",\n            \"categories\": [\n                \"66abe59c11f4320bcbb94994\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"It prints text to console.\",\n            \"_id\": \"66ac647857a63da18353ff89\",\n            \"createdAt\": \"2024-08-02T04:45:44.282Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.282Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"Explain polymorphism in Java.\",\n            \"categories\": [\n                \"66abe59c11f4320bcbb94994\"\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"Think about method overloading and overriding.\",\n            \"_id\": \"66ac647857a63da18353ff8a\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"Who is the creator of Java?\",\n            \"categories\": [\n                \"66abe59c11f4320bcbb94994\"\n            ],\n            \"questionType\": \"MCQ\",\n            \"marks\": 5,\n            \"hints\": \"Hint: He worked at Sun Microsystems.\",\n            \"_id\": \"66ac647857a63da18353ff8b\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"How are functions declared\",\n            \"categories\": [\n                \"66ac5ef957a63da18353ff4c\",\n                \"66ac5c1bdead2dadf6c57950\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Think about syntax and return types.\",\n            \"_id\": \"66ac647857a63da18353ff8c\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"What is the DataType? Explain all dataTypes\",\n            \"categories\": [\n                \"66ac5ef957a63da18353ff4c\",\n                \"66ac5c1bdead2dadf6c57950\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Consider primitive and non-primitive types, and give examples of each.\",\n            \"_id\": \"66ac647857a63da18353ff8d\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"What are lists in Python?\",\n            \"categories\": [\n                \"66ac5ed357a63da18353ff46\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Think about arrays with more functionality.\",\n            \"_id\": \"66ac647857a63da18353ff8e\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"How to declare a function in Python?\",\n            \"categories\": [\n                \"66ac5ed357a63da18353ff46\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Use the `def` keyword.\",\n            \"_id\": \"66ac647857a63da18353ff8f\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"What is npm in NodeJs?\",\n            \"categories\": [\n                \"66ac5ee257a63da18353ff49\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Node package manager.\",\n            \"_id\": \"66ac647857a63da18353ff90\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"Explain the event loop in NodeJs.\",\n            \"categories\": [\n                \"66ac5ee257a63da18353ff49\"\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"It's essential for non-blocking I/O.\",\n            \"_id\": \"66ac647857a63da18353ff91\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"What is `const` in JavaScript?\",\n            \"categories\": [\n                \"66ac5ef957a63da18353ff4c\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Declares a block-scoped constant.\",\n            \"_id\": \"66ac647857a63da18353ff92\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"Describe closures in JavaScript.\",\n            \"categories\": [\n                \"66ac5ef957a63da18353ff4c\"\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"Functions that retain their lexical scope.\",\n            \"_id\": \"66ac647857a63da18353ff93\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"question\": \"What is the difference between `let` and `var` in JavaScript?\",\n            \"categories\": [\n                \"66ac5ef957a63da18353ff4c\"\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Think about scope and hoisting.\",\n            \"_id\": \"66ac647857a63da18353ff94\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjNWE5ODkwYWIyZGFkOTQ5NjVjMWIiLCJpYXQiOjE3MjI1NzE0MTYsImV4cCI6MTcyMjY1NzgxNn0.DRMevhhPUphtXmaiPAvtko9ES6cgbIvSRAGkhF4SGW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/question/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"question",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Questions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/question/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"question",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4428"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"114c-I2ArVnPYECykWczq3TupsV/ApAo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Aug 2024 04:46:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"66ac647857a63da18353ff8d\",\n            \"question\": \"What is the DataType? Explain all dataTypes\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ef957a63da18353ff4c\",\n                    \"name\": \"Javascript\",\n                    \"description\": \"Description for Javascript\"\n                },\n                {\n                    \"_id\": \"66ac5c1bdead2dadf6c57950\",\n                    \"name\": \"C\",\n                    \"description\": \"C Category\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Consider primitive and non-primitive types, and give examples of each.\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff8b\",\n            \"question\": \"Who is the creator of Java?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66abe59c11f4320bcbb94994\",\n                    \"name\": \"Java\",\n                    \"description\": \"Java Category\"\n                }\n            ],\n            \"questionType\": \"MCQ\",\n            \"marks\": 5,\n            \"hints\": \"Hint: He worked at Sun Microsystems.\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff8c\",\n            \"question\": \"How are functions declared\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ef957a63da18353ff4c\",\n                    \"name\": \"Javascript\",\n                    \"description\": \"Description for Javascript\"\n                },\n                {\n                    \"_id\": \"66ac5c1bdead2dadf6c57950\",\n                    \"name\": \"C\",\n                    \"description\": \"C Category\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Think about syntax and return types.\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff89\",\n            \"question\": \"What is the use of `System.out.println()` in Java?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66abe59c11f4320bcbb94994\",\n                    \"name\": \"Java\",\n                    \"description\": \"Java Category\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"It prints text to console.\",\n            \"createdAt\": \"2024-08-02T04:45:44.282Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.282Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff8a\",\n            \"question\": \"Explain polymorphism in Java.\",\n            \"categories\": [\n                {\n                    \"_id\": \"66abe59c11f4320bcbb94994\",\n                    \"name\": \"Java\",\n                    \"description\": \"Java Category\"\n                }\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"Think about method overloading and overriding.\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff91\",\n            \"question\": \"Explain the event loop in NodeJs.\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ee257a63da18353ff49\",\n                    \"name\": \"NodeJs\",\n                    \"description\": \"Description for NodeJs\"\n                }\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"It's essential for non-blocking I/O.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff92\",\n            \"question\": \"What is `const` in JavaScript?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ef957a63da18353ff4c\",\n                    \"name\": \"Javascript\",\n                    \"description\": \"Description for Javascript\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Declares a block-scoped constant.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff90\",\n            \"question\": \"What is npm in NodeJs?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ee257a63da18353ff49\",\n                    \"name\": \"NodeJs\",\n                    \"description\": \"Description for NodeJs\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Node package manager.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff93\",\n            \"question\": \"Describe closures in JavaScript.\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ef957a63da18353ff4c\",\n                    \"name\": \"Javascript\",\n                    \"description\": \"Description for Javascript\"\n                }\n            ],\n            \"questionType\": \"LAQ\",\n            \"marks\": 15,\n            \"hints\": \"Functions that retain their lexical scope.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff94\",\n            \"question\": \"What is the difference between `let` and `var` in JavaScript?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ef957a63da18353ff4c\",\n                    \"name\": \"Javascript\",\n                    \"description\": \"Description for Javascript\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Think about scope and hoisting.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff8e\",\n            \"question\": \"What are lists in Python?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ed357a63da18353ff46\",\n                    \"name\": \"Pyhton\",\n                    \"description\": \"Description for Python Category\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 5,\n            \"hints\": \"Think about arrays with more functionality.\",\n            \"createdAt\": \"2024-08-02T04:45:44.290Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.290Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66ac647857a63da18353ff8f\",\n            \"question\": \"How to declare a function in Python?\",\n            \"categories\": [\n                {\n                    \"_id\": \"66ac5ed357a63da18353ff46\",\n                    \"name\": \"Pyhton\",\n                    \"description\": \"Description for Python Category\"\n                }\n            ],\n            \"questionType\": \"SAQ\",\n            \"marks\": 10,\n            \"hints\": \"Use the `def` keyword.\",\n            \"createdAt\": \"2024-08-02T04:45:44.291Z\",\n            \"updatedAt\": \"2024-08-02T04:45:44.291Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "4500",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:{{PORT}}/api/v1",
+			"type": "string"
+		}
+	]
+}

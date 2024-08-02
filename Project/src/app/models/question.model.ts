@@ -8,9 +8,9 @@ const questionSchema: Schema = new Schema(
       type: String,
       required: true,
     },
-    category: {
+    categories: {
       type: [Schema.Types.ObjectId],
-      ref: "categories",
+      ref: "category",
       required: true,
     },
     questionType: {
